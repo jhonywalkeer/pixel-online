@@ -1,3 +1,5 @@
+import logger from '../utils/functions/logger.js'
+
 export const whiteboardRoomIds = new Set<string>()
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 const charactersLength = characters.length
@@ -11,7 +13,7 @@ export function getRoomId() {
     whiteboardRoomIds.add(result)
     return result
   } else {
-    console.log('roomId exists, remaking another one.')
+    logger.warn('roomId exists, remaking another one.')
     getRoomId()
   }
 }
