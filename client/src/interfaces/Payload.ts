@@ -7,4 +7,6 @@ export interface Payload {
   x: number
   y: number
   anim: string
+  name: string
+  whiteboardId: string
 }
