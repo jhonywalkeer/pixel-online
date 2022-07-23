@@ -1,7 +1,7 @@
 import { Command } from '@colyseus/command'
+import { Payload } from '../interfaces/Payload'
 import { ChatMessageEntity } from '../entities/schema/ChatMessage'
 import { OfficeState } from '../interfaces/OfficeState'
-import { Payload } from '../interfaces/Payload'
 export default class ChatMessageUpdateCommand extends Command<OfficeState, Payload> {
   execute(data: Payload) {
     const { client, content } = data
