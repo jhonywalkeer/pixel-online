@@ -1,9 +1,9 @@
 import { Command } from '@colyseus/command'
-import { Payload } from '../interfaces/Payload'
-import { OfficeState } from '../interfaces/OfficeState'
+import { PayloadInterface } from '../interfaces/Payload'
+import { OfficeStateInterface } from '../interfaces/OfficeState'
 
-export class ComputerAddUserCommand extends Command<OfficeState, Payload> {
-  execute(data: Payload) {
+export class ComputerAddUserCommand extends Command<OfficeStateInterface, PayloadInterface> {
+  execute(data: PayloadInterface) {
     const { client, computerId } = data
     const computer = this.room.state.computers.get(computerId)
     const clientId = client.sessionId
@@ -13,8 +13,8 @@ export class ComputerAddUserCommand extends Command<OfficeState, Payload> {
   }
 }
 
-export class ComputerRemoveUserCommand extends Command<OfficeState, Payload> {
-  execute(data: Payload) {
+export class ComputerRemoveUserCommand extends Command<OfficeStateInterface, PayloadInterface> {
+  execute(data: PayloadInterface) {
     const { client, computerId } = data
     const computer = this.state.computers.get(computerId)
 

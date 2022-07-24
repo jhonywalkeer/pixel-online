@@ -1,7 +1,7 @@
 import { Schema, type } from '@colyseus/schema'
-import { Player } from '../../interfaces/Player'
+import { PlayerInterface } from '../../interfaces/Player'
 
-export class PlayerEntity extends Schema implements Player {
+export class PlayerEntity extends Schema implements PlayerInterface {
   @type('string') name = ''
   @type('number') x = 705
   @type('number') y = 500

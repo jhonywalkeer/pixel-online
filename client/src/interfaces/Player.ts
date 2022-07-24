@@ -1,6 +1,6 @@
 import { Schema } from '@colyseus/schema'
 
-export interface Player extends Schema {
+export interface PlayerInterface extends Schema {
   name: string
   x: number
   y: number

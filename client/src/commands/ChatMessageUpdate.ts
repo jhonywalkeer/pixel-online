@@ -1,9 +1,12 @@
 import { Command } from '@colyseus/command'
-import { Payload } from '../interfaces/Payload'
+import { PayloadInterface } from '../interfaces/Payload'
 import { ChatMessageEntity } from '../entities/schema/ChatMessage'
-import { OfficeState } from '../interfaces/OfficeState'
-export default class ChatMessageUpdateCommand extends Command<OfficeState, Payload> {
-  execute(data: Payload) {
+import { OfficeStateInterface } from '../interfaces/OfficeState'
+export default class ChatMessageUpdateCommand extends Command<
+  OfficeStateInterface,
+  PayloadInterface
+> {
+  execute(data: PayloadInterface) {
     const { client, content } = data
     const player = this.room.state.players.get(client.sessionId)
     const chatMessages = this.room.state.chatMessages

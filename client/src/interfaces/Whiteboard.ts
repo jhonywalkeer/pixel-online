@@ -1,6 +1,6 @@
 import { Schema, SetSchema } from '@colyseus/schema'
 
-export interface Whiteboard extends Schema {
+export interface WhiteboardInterface extends Schema {
   roomId: string
   connectedUser: SetSchema<string>
 }

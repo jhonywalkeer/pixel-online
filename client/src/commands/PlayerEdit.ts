@@ -1,9 +1,9 @@
 import { Command } from '@colyseus/command'
-import { Payload } from '../interfaces/Payload'
-import { OfficeState } from '../interfaces/OfficeState'
+import { PayloadInterface } from '../interfaces/Payload'
+import { OfficeStateInterface } from '../interfaces/OfficeState'
 
-export default class PlayerEditCommand extends Command<OfficeState, Payload> {
-  execute(data: Payload) {
+export default class PlayerEditCommand extends Command<OfficeStateInterface, PayloadInterface> {
+  execute(data: PayloadInterface) {
     const { client, name } = data
     const player = this.room.state.players.get(client.sessionId)
 

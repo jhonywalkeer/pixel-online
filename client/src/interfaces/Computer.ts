@@ -1,5 +1,5 @@
 import { Schema, SetSchema } from '@colyseus/schema'
 
-export interface Computer extends Schema {
+export interface ComputerInterface extends Schema {
   connectedUser: SetSchema<string>
 }

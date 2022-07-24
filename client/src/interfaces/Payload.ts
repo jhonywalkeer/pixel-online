@@ -1,6 +1,6 @@
 import { Client } from 'colyseus'
 
-export interface Payload {
+export interface PayloadInterface {
   client: Client
   content: string
   computerId: string
