@@ -1,4 +1,4 @@
-export enum Message {
+export enum MessageEnum {
   UPDATE_PLAYER,
   UPDATE_PLAYER_NAME,
   READY_TO_CONNECT,
